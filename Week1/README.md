@@ -8,8 +8,6 @@
 
 Afbeeldignen en cookies.
 
-> Visited websites
-
 - Ajax
 - Nu.nl
 - Telegraaf.nl
@@ -23,7 +21,12 @@ Afbeeldignen en cookies.
 - NPO Start
 - Awakenings
 - Google Drive
--
+
+#### Afbeeldingen
+
+#### Cookies
+
+Veel websites van kranten geven een melding voor het accepteren van cookies. Na het accepteren
 
 ### Opdracht 1B - Fork je OBA
 
@@ -31,12 +34,18 @@ Progressive Enhancement toepaasen op mijn OBA web app.
 
 ### Device lab test:
 
-Testen met verschillende browsers en devices. Voornamelijk windows tablet en phones. data die normaal wordt ingeladen werkt niet op deze devices. Krijg geen zoekresultaten.
+Testen met verschillende browsers en devices. Voornamelijk windows tablet en phones. Data die normaal wordt ingeladen werkt niet op deze devices. Krijg geen zoekresultaten.
 
--[device test]()
+![device test](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/Week1/devicelab1.png?raw=true)
+
+![device test](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/Week1/devicelab2.png?raw=true)
+
+> Op dit device werkt mijn oba app volledig met resultaten.
+
+![device test](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/Week1/devicelab3.png?raw=true)
 
 ### Screenreader test:
 
-Test gedaan met voice over van apple. hiermee leest hij alles voro wat er op de pagina staat en waar ik op dat moment op focus met mijn toetsenbord.
+Test gedaan met voice over van apple. Hiermee leest hij alles voor wat er op de pagina staat en waar ik op dat moment op focus met mijn toetsenbord.
 
-Mijn OBA app laat studie marteriaal zien die gekoppeld is aan de selected studie.
+Mijn OBA app laat studiemarteriaal zien die gekoppeld is aan de selected studie.
