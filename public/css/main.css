@@ -1,0 +1,146 @@
+/*
+========================================================
+    GENERAL
+========================================================
+*/
+body {
+  background: #36d1dc;
+  background: -webkit-linear-gradient(to top, #5b86e5, #36d1dc);
+  background: linear-gradient(to top, #5b86e5, #36d1dc);
+  font-family: Lato, sans-serif;
+}
+.container {
+  display: block;
+  width: 400px;
+  margin: 100px auto 0;
+  background-color: white;
+  padding: 1rem;
+}
+/*
+========================================================
+    Text
+========================================================
+*/
+h1 {
+  color: red;
+  font-family: Lato, sans-serif;
+}
+h2 {
+  /* color: darkred;
+  font-family: Lato, sans-serif; */
+  color: #333;
+  font-weight: 800;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+/*
+========================================================
+    Button
+========================================================
+*/
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  margin: 10px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+button:hover {
+  color: #0fc57c;
+}
+/*
+========================================================
+    List
+========================================================
+*/
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  list-style: none;
+  font-family: Lato, sans-serif;
+  font-size: 1em;
+}
+.todo {
+  color: black;
+}
+li > input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  /* top: 15px; */
+}
+/*
+========================================================
+    Nieuwe taak
+========================================================
+*/
+h3,
+label[for="nieuwe-taak"] {
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+label[for="nieuwe-taak"] {
+  display: block;
+  margin: 0 0 20px;
+}
+/*
+========================================================
+    Volbracht
+========================================================
+*/
+.volbracht {
+  text-decoration: line-through;
+  color: #888;
+}
+/*
+========================================================
+    Input
+========================================================
+*/
+input[type="text"] {
+  margin: 0;
+  font-size: 1em;
+  line-height: 18px;
+  /* height: 18px; */
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+/*
+========================================================
+    Edit
+========================================================
+*/
+
+ul li input[type="text"] {
+  display: none;
+}
+
+ul li.editMode input[type="text"] {
+  display: block;
+}
+
+ul li.editMode label {
+  display: none;
+}
