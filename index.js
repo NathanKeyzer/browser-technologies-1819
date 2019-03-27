@@ -10,7 +10,7 @@ app.use(express.static("public"));
 //placeholders for added task
 var task = ["minor webdev", "browser technologies", "performance matters"];
 //placeholders for removed task
-var complete = ["ben je bitch niet"];
+var complete = ["web app from scratch", "css to the rescue", "project1"];
 
 //post route for adding new task
 app.post("/addtask", function(req, res) {
@@ -20,12 +20,15 @@ app.post("/addtask", function(req, res) {
   res.redirect("/");
 });
 
-app.post("/removetask", function(req, res) {
+app.post("/removetask/:id", function(req, res) {
   var completeTask = req.body.check;
+  var id = req.params.id;
   //check for the "typeof" the different completed task, then add into the complete task
+  task.splice(task.indexOf(id), 1);
   if (typeof completeTask === "string") {
     complete.push(completeTask);
     //check if the completed task already exits in the task when checked, then remove it
+
     task.splice(task.indexOf(completeTask), 1);
   } else if (typeof completeTask === "object") {
     for (var i = 0; i < completeTask.length; i++) {
@@ -36,12 +39,30 @@ app.post("/removetask", function(req, res) {
   res.redirect("/");
 });
 
+app.post("/removetask", function(req, res) {
+  var completeTask = req.body.check;
+  var id = req.params.id;
+  //check for the "typeof" the different completed task, then add into the complete task
+  task.splice(task.indexOf(id), 1);
+  if (typeof completeTask === "string") {
+    complete.push(completeTask);
+    //check if the completed task already exits in the task when checked, then remove it
+
+    task.splice(task.indexOf(completeTask), 1);
+  } else if (typeof completeTask === "object") {
+    for (var i = 0; i < completeTask.length; i++) {
+      complete.push(completeTask[i]);
+      task.splice(task.indexOf(completeTask[i]), 1);
+    }
+  }
+  res.redirect("/");
+});
 //render the ejs and display added task, completed task
 app.get("/", function(req, res) {
   res.render("index", { task: task, complete: complete });
 });
 
 //set app to listen on port 3000
-app.listen(3000, function() {
-  console.log("server is running on port 3000");
+app.listen(4000, function() {
+  console.log("server is running on port 4000");
 });

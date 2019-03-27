@@ -14,11 +14,14 @@
   <h3>Toegevoegde taken</h3>
   <ul class="todo">
     <% for( var i = 0; i < task.length; i++){ %>
-
-      <li class="editMode"><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %><button class="edit">Edit</button><button class="delete">Delete</button> </li>
+      <li class="editMode">
+        <input type="checkbox" onClick="save()" name="check" value="<%= task[i] %>" /> <%= task[i] %>
+        <button class="edit">Edit</button>
+        <button class="delete" formaction="/removetask/<%= task[i] %>">Delete</button>
+      </li>
       <% } %>
     </ul>
-   <button formaction="/removetask" type="submit"> Verwijder </button>
+   <button formaction="/removetask" type="submit">Delete</button>
 </form>
   <h3>Volbrachte taken</h3>
   <ul class="volbracht">
@@ -27,7 +30,9 @@
   <% } %>
   </ul>
 </div>
-<script type="text/javascript" src="./js/main.js">
+
+
+<script type="text/javascript"src="./js/main.js">
 
 </script>
 </body>

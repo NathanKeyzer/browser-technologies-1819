@@ -1,26 +1,56 @@
 # Browser Technologies @cmda-minor-web 1819
+
 //Robuuste, toegankelijke websites leren bouwen …
+
+Readme for browser Technologies
+
+- [x]een wireflow met een bescrhijving van de core functionality
+  .realiable .usable .pleasurable
+- een beschrijving van de features Browser Technologies
+- welke browser de features wel/neit ondersteunen.
+- een bescrhijving van de accesability isseus die zijn onderzocht.
+- de demo is oppgebouwd in 3 lagen volgens het principe van progressive enhancement
+- de user experience van de demo is goed.
+- De leesbaarheidregels zijn toegepast, contrast en kleuren kloppen
+- het heeft een gebruiksvriendelijke interface, met gebruikmaking van affordanse en feedback op de interactieve elementen
+- Student kan uitleggen wat progressive enhancement en feature detectie is en hoe dit toe te passen in web development.
+
+[live demo](#)
+![image](#)
+
+## table of content
+
+- the case
+-
+- bla bla
+- bla leesbaarheidregels
+
+### The case
+
+Voor het vak heb ik de case gekozen om een boodschappenlijstje te maken. Dit lijstje moet Progressive Enhancement zijn. Hierbij heb ik nagedacht over vetschillende functionaliteiten die ik wil gaan toeppasen om dit lijstje extra interressant te maken.
+
+### Wireflow
+
+Hieronder is een kleine wireflow te zien van de hoofdfunctionaliteit van deze website. verschillende lagen
+
+1. Reliable
+2. Usable
+3. Pleasurable
+
+![ruimte voor een afbeelding](#)
+
+### Beschrijving features
+
+### 3 lagen volgens PE
+
+### user experience
+
+### Kleuren en Contrast
+
+### Progressive Enhancement & Feature Detection
+
+Web is for everyone
 
 In het vak Browser Technologies leer je hoe je goede, robuuste, toegankelijke websites maakt. Je gaat leren over Progressive Enhancement, Feature Detection en Fallback. Het web is er voor iedereen. In dit vak leer je hoe je daarvoor kan zorgen.
 
 Een van de mooiste principes van het web is dat het er echt is voor iedereen. Iedereen met een computer en een browser moet gebruik kunnen maken van het web. Het web is geen gecontroleerde (programmeer) omgeving. Je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij ziet in jouw browser. Er zijn natuurlijk de technische beperkingen. Zoals - Afmetingen van de browser - Grootte van het apparaat - Manier van interactie - Kwaliteit van de hardware - Kwaliteit van het netwerk. En er zijn mensen. Allemaal verschillende mensen ...
-
-## Leerdoelen
-- _Wat is Progressive enhancement en hoe kun je dit toepassen._
-- _Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund._
-- _Browser Technologies onderzoeken en implementeren als enhancement._
-
-[Rubric](https://docs.google.com/spreadsheets/d/1X8XBbblGAcoij4zPcbjZ5FHcQMusn1hc0NvNkzP5qx4/edit?usp=sharing)
-
-## Programma
-
-### [Week 1 - Progressive Enhancement](Week1)
-Doel: Het web is voor iedereen. Leren over Progressive enhancement en kennismaken met testen en het device lab.
-
-
-### [Week 2 - Browsers & Feature Detection](Week2)
-Doel: Wat laat je zien als een browser of gebruiker een 'enhancement' niet kan tonen of zien? Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund?
-
-
-### [Week 3 - Robuuste, toegankelijke websites maken](Week3)
-Doel: Verder werken aan de opdracht.
