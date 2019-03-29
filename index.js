@@ -1,33 +1,53 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
+const port = process.env.PORT || 4000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 //render css files
 app.use(express.static("public"));
 
-//placeholders for added task
-var task = ["minor webdev", "browser technologies", "performance matters"];
-//placeholders for removed task
+var taskObject = {
+  minor_webdev: {
+    label: "Minor Webdev"
+  },
+  browser_tech: {
+    label: "Browser Tech"
+  }
+};
+
 var complete = ["web app from scratch", "css to the rescue", "project1"];
 
-//post route for adding new task
 app.post("/addtask", function(req, res) {
   var newTask = req.body.newtask;
-  //add the new task from the post route
-  task.push(newTask);
+
+  taskObject[newTask] = {
+    label: req.body.newtask
+  };
+  console.log(taskObject);
   res.redirect("/");
 });
+app.post("/opslaan", function(req, res) {
+  console.log(req.body);
+  for (let taskKey in taskObject) {
+    const task = taskObject[taskKey];
+    console.log("deze", task);
+  }
 
+  res.redirect("/");
+});
 app.post("/removetask/:id", function(req, res) {
-  var completeTask = req.body.check;
   var id = req.params.id;
-  //check for the "typeof" the different completed task, then add into the complete task
-  task.splice(task.indexOf(id), 1);
+
+  delete taskObject[id];
+  res.redirect("/");
+});
+app.post("/check", function(req, res) {
+  var completeTask = req.body.check;
+
   if (typeof completeTask === "string") {
     complete.push(completeTask);
-    //check if the completed task already exits in the task when checked, then remove it
 
     task.splice(task.indexOf(completeTask), 1);
   } else if (typeof completeTask === "object") {
@@ -39,30 +59,19 @@ app.post("/removetask/:id", function(req, res) {
   res.redirect("/");
 });
 
-app.post("/removetask", function(req, res) {
-  var completeTask = req.body.check;
+app.get("/edit/:id", function(req, res) {
   var id = req.params.id;
-  //check for the "typeof" the different completed task, then add into the complete task
-  task.splice(task.indexOf(id), 1);
-  if (typeof completeTask === "string") {
-    complete.push(completeTask);
-    //check if the completed task already exits in the task when checked, then remove it
 
-    task.splice(task.indexOf(completeTask), 1);
-  } else if (typeof completeTask === "object") {
-    for (var i = 0; i < completeTask.length; i++) {
-      complete.push(completeTask[i]);
-      task.splice(task.indexOf(completeTask[i]), 1);
-    }
-  }
+  res.render("index", { task: taskObject, complete: complete, editID: id });
+});
+app.post("/edit/:id", function(req, res) {
+  taskObject[req.params.id].label = req.body.new;
   res.redirect("/");
 });
-//render the ejs and display added task, completed task
+
 app.get("/", function(req, res) {
-  res.render("index", { task: task, complete: complete });
+  res.render("index", { task: taskObject, complete: complete });
 });
 
-//set app to listen on port 3000
-app.listen(4000, function() {
-  console.log("server is running on port 4000");
-});
+//set app to listen on port 4000
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));

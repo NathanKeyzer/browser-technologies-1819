@@ -1,6 +1,11 @@
 var i,
-  checkboxes = document.querySelectorAll("input[type=checkbox]");
+  checkboxes = document.getElementsByClassName("vinkje");
 
+for (var i = 0; i < checkboxes.length; i++) {
+  (index => {
+    checkboxes[index].addEventListener("click", save);
+  })(i);
+}
 function save() {
   for (i = 0; i < checkboxes.length; i++) {
     localStorage.setItem(checkboxes[i].value, checkboxes[i].checked);

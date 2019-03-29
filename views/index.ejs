@@ -3,33 +3,53 @@
     <title>Lijstje</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="./css/main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
   </head>
 <body>
-  <div class="container">
+  <main>
   <h2>Todo Lijst</h2>
-<form action ="/addtask" method="POST">
-  <label for="nieuwe-taak">Voeg item toe</label>
-  <input type="text" name="newtask" placeholder="voeg je bitch"><button> Voegtoe </button>
-  <h3>Toegevoegde taken</h3>
-  <ul class="todo">
-    <% for( var i = 0; i < task.length; i++){ %>
-      <li class="editMode">
-        <input type="checkbox" onClick="save()" name="check" value="<%= task[i] %>" /> <%= task[i] %>
-        <button class="edit">Edit</button>
-        <button class="delete" formaction="/removetask/<%= task[i] %>">Delete</button>
-      </li>
-      <% } %>
-    </ul>
-   <button formaction="/removetask" type="submit">Delete</button>
-</form>
-  <h3>Volbrachte taken</h3>
-  <ul class="volbracht">
-  <% for(var i = 0; i < complete.length; i++){ %>
-  <li class="editMode"><input type="checkbox" checked><%= complete[i] %><button class="edit">Edit</button> </li>
+  <form action ="/addtask" method="POST">
+    <!-- <fieldset> -->
+    <fieldset>
+      <h3>Voeg item toe</h3>
+      <label for="newTask">Nieuw</label>
+      <input type="text" id="newTask" name="newtask" placeholder="todo"><button class="voegtoe"> Voegtoe </button>
+    <!-- </fieldset> -->
+  </form>
+      <label for="nieuwe-taak">Toegevoegde taken</label>
+
+      <ul class="todo">
+        <% for (let taskKey in task) { %>
+          <li class="editMode">
+            <input id="<%= taskKey %>" class="vinkje" type="checkbox" name="check" value="<%= taskKey %>"/>
+            <label for="<%= taskKey %>"class="streep"><%= task[taskKey].label %></label>
+            <% if (locals.editID && taskKey === editID) { %>
+              <form action="/edit/<%= taskKey %>" method="post">
+                <input type="text" name="new" value="<%= task[taskKey].label %>">
+                <input type="submit" value="save">
+              </form>
+            <% } else { %>
+              <a href="/edit/<%= taskKey %>">Edit</a>
+            <% } %>
+            <button class="delete" formaction="/removetask/<%= taskKey %>">Delete</button>
+          </li>
+          <% } %>
+          
+        </ul>
+
+        <label for="nieuwe-taak">Volbracht</label>
+          <ul class="volbracht">
+          <% for(var i = 0; i < complete.length; i++){ %>
+          <li class="editMode">
+          <input type="checkbox" checked> <%= complete[i] %>
+          <button class="edit">Edit</button>
+          <button class="delete" formaction="/removetask/<%= task[i] %>">Delete</button>
+        </li>
   <% } %>
   </ul>
-</div>
+  <!-- </fieldset> -->
+  <!-- </form> -->
+</main>
 
 
 <script type="text/javascript"src="./js/main.js">
