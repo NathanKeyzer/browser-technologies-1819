@@ -1,29 +1,15 @@
-# Browser Technologies @cmda-minor-web 1819
+# Browser Technologies
 
-//Robuuste, toegankelijke websites leren bouwen …
+[live demo](https://browsertodo.herokuapp.com/)
+![image](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/public/images/app.png?raw=true)
 
-Readme for browser Technologies
-
-- [x]een wireflow met een bescrhijving van de core functionality
-  .realiable .usable .pleasurable
-- een beschrijving van de features Browser Technologies
-- welke browser de features wel/neit ondersteunen.
-- een bescrhijving van de accesability isseus die zijn onderzocht.
-- de demo is oppgebouwd in 3 lagen volgens het principe van progressive enhancement
-- de user experience van de demo is goed.
-- De leesbaarheidregels zijn toegepast, contrast en kleuren kloppen
-- het heeft een gebruiksvriendelijke interface, met gebruikmaking van affordanse en feedback op de interactieve elementen
-- Student kan uitleggen wat progressive enhancement en feature detectie is en hoe dit toe te passen in web development.
-
-[live demo](#)
-![image](#)
-
-## table of content
+## Table of content
 
 - [The Case](thecase)
--
--
-- bla leesbaarheidregels
+- [Wireflow](wireflow)
+- [Beschrijving Features](beschrijvingfeatures)
+- [3 lagen volgens PE](3lagenvolgenspe)
+- [Kleuren en Contrast](kleurenencontrast)
 
 ### The case
 
@@ -33,7 +19,7 @@ Voor het vak heb ik de case gekozen om een todo lijstje te maken. Dit lijstje mo
 
 Hieronder is een kleine wireflow te zien van de hoofdfunctionaliteit van deze website.
 
-![ruimte voor een afbeelding](#)
+![wireflow](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/public/images/wireflow.JPG?raw=true)
 
 ### Beschrijving features
 
@@ -46,5 +32,7 @@ Hieronder is een kleine wireflow te zien van de hoofdfunctionaliteit van deze we
 ### User experience
 
 ### Kleuren en Contrast
+
+[Source](https://color.review/)
 
 ### Progressive Enhancement & Feature Detection

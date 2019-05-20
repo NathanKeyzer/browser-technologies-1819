@@ -162,10 +162,36 @@ input[type="text"]:focus {
 ul li input[type="text"] {
   display: none;
 }
-
+.editMode{
+  display: flex;
+  align-items: baseline;
+}
+.editMode label{
+  margin-right: auto;
+}
+.editMode form {
+  display: flex;
+  align-items: baseline;
+}
 ul li.editMode input[type="text"] {
   display: block;
 }
+li.editMode input, li.editMode label{
+  display: flex;
+  justify-content: flex-start;
+}
+li.editMode a, li.editMode button{
+  display: flex;
+  justify-content: flex-end;
+}
+li.editModel label.streep{
+  display: none;
+}
+form input[type="submit"]{
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 /* ul li.editMode label {
   display: none;
