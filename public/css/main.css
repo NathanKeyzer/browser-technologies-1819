@@ -1,3 +1,8 @@
+*{
+  display: block;
+  margin:0;
+  padding: 0;
+}
 /*
 ========================================================
     GENERAL
@@ -11,7 +16,7 @@ body {
 }
 main {
   display: block;
-  width: 400px;
+  width: 500px;
   margin: 50px auto 0;
   background-color: white;
   padding: 1rem;
@@ -30,11 +35,13 @@ h2 {
   font-family: Lato, sans-serif; */
   color: #3e6196;
   font-weight: 800;
-  font-size: 15px;
-  border-bottom: 2px solid #3e6196;
-  padding: 30px 0 10px;
+  font-size: 24px;
+  /* border-bottom: 2px solid #3e6196; */
+  padding: 5px 0 10px;
   margin: 0;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
 }
 /*
 ========================================================
@@ -43,7 +50,7 @@ h2 {
 */
 button,
 a,
-input[type="submit"] {
+input[type="submit"],.save {
   background: none;
   border: 0px;
   color: #888;
@@ -52,6 +59,9 @@ input[type="submit"] {
   margin: 10px 0 0;
   font-family: Lato, sans-serif;
   cursor: pointer;
+}
+input[type="submit" i] {
+  padding:0;
 }
 button:hover {
   color: #0fc57c;
@@ -111,13 +121,31 @@ label[for="nieuwe-taak"] {
   font-weight: 500;
   font-size: 15px;
   border-bottom: 2px solid #3e6196;
-  padding: 30px 0 10px;
+  padding: 35px 0 10px;
   margin: 0;
   text-transform: uppercase;
 }
 label[for="nieuwe-taak"] {
   display: block;
-  margin: 0 0 20px;
+  /* margin: 0 0 20px; */
+}
+label[for="newTask"]{
+  margin: 0 10px;
+}
+button.voegtoe{
+  display: flex;
+  float: right;
+  text-decoration: none;
+}
+
+.nathan{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+margin: 2% 0 0 0;
+}
+.nathan button{
+  justify-content: flex-end;
 }
 /*
 ========================================================
@@ -132,6 +160,9 @@ input[type="checkbox"]:checked + .streep {
   text-decoration: line-through;
   color: #888;
 }
+button.edit, button.delete{
+  text-decoration: none;
+}
 /*
 ========================================================
     Input
@@ -141,6 +172,7 @@ input[type="text"] {
   margin: 0;
   font-size: 1em;
   line-height: 18px;
+  width: 75%;
   /* height: 18px; */
   padding: 10px;
   border: 1px solid #ddd;
@@ -196,3 +228,16 @@ form input[type="submit"]{
 /* ul li.editMode label {
   display: none;
 } */
+
+
+/*
+========================================================
+    Icons
+========================================================
+*/
+.trash:before{
+  content: "\f014";
+}
+.pen:before{
+  content:"U+270D U+1F3FD";
+}

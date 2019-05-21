@@ -11,11 +11,14 @@
   <form action ="/addtask" method="POST">
     <!-- <fieldset> -->
     <fieldset>
+
       <h3>Voeg item toe</h3>
+      <div class="nathan">
       <label for="newTask">Nieuw</label>
-      <input type="text" id="newTask" name="newtask" placeholder="todo"><button class="voegtoe"> Voegtoe </button>
+      <input type="text" id="newTask" name="newtask" placeholder="todo"><button class="voegtoe">➕</button>
     <!-- </fieldset> -->
   </form>
+</div>
       <label for="nieuwe-taak">Toegevoegde taken</label>
 
       <ul class="todo">
@@ -26,24 +29,27 @@
             <% if (locals.editID && taskKey === editID) { %>
               <form action="/edit/<%= taskKey %>" method="post">
                 <input type="text" name="new" value="<%= task[taskKey].label %>">
-                <input type="submit" value="Save">
+                <input class="save" type="submit" value="💾">
               </form>
             <% } else { %>
-              <a href="/edit/<%= taskKey %>">Edit</a>
+              <a href="/edit/<%= taskKey %>">🖋</a>
             <% } %>
-            <button class="delete" formaction="/removetask/<%= taskKey %>">Delete</button>
+            <button class="delete" formaction="/removetask/<%= taskKey %>">&#128465;</button>
           </li>
           <% } %>
 
         </ul>
 
         <label for="nieuwe-taak">Volbracht</label>
-          <ul class="volbracht">
+          <ul class="complete">
           <% for(var i = 0; i < complete.length; i++){ %>
           <li class="editMode">
-          <input type="checkbox" checked> <%= complete[i] %>
-          <button class="edit">Edit</button>
-          <button class="delete" formaction="/removetask/<%= task[i] %>">Delete</button>
+          <input type="checkbox" checked>
+          <label class="volbracht">
+          <%= complete[i] %>
+          </label>
+          <button class="edit">🖋</button>
+          <button class="delete" formaction="/removetask/<%= task[i] %>">&#128465;</button>
         </li>
   <% } %>
   </ul>
