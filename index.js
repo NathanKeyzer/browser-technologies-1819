@@ -14,6 +14,9 @@ var taskObject = {
   },
   browser_tech: {
     label: "Browser Tech"
+  },
+  todo: {
+    label: "todo"
   }
 };
 
