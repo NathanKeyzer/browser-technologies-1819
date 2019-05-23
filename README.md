@@ -26,13 +26,15 @@ Hieronder is een kleine wireflow te zien van de hoofdfunctionaliteit van deze we
 ### 3 lagen volgens PE
 
 1. Reliable
-2. Usable
-3. Pleasurable
+De functionele laag van de applicatie werkt nog steeds ookal staat CSS en javasscriopt uit. Dit ziet er natuurlijk minder mooi uit maar werkt.
 
-### User experience
+2. Usable
+CSS toegepast ziet de App er mooi uit hij werkt ook zonder javascript omdat hij het wegschrijft naar de server.
+
+3. Pleasurable
+Als alles aanstaat werkt de App zoals ik hem bedacht heb. Met daarbij alle finctionaliteiten.
+
 
 ### Kleuren en Contrast
 
 [Source](https://color.review/)
-
-### Progressive Enhancement & Feature Detection

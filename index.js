@@ -23,7 +23,9 @@ var taskObject = {
     isCompleted: true
   }
 };
-
+app.get("/offline", (req, res) => {
+  res.render("offline.ejs");
+});
 //post een nieuwe taak
 app.post("/addtask", function(req, res) {
   var newTask = req.body.newtask;

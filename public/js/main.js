@@ -18,6 +18,14 @@ for (i = 0; i < checkboxes.length; i++) {
     localStorage.getItem(checkboxes[i].value) === "true" ? true : false;
 }
 
+function checkQuerySelector(query) {
+        if ('querySelector' in document) {
+            return document.querySelector(query);
+        } else {
+            query = query.substr(1);
+            return document.getElementsByClassName(query)[0];
+        }
+    }
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
