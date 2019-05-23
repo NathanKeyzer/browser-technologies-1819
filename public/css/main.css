@@ -19,10 +19,11 @@ body {
 }
 main {
   display: block;
-  width: 600px;
+  width: 90%;
   margin: 50px auto 0;
   background-color: white;
   padding: 1rem;
+  margin: 2% auto;
 }
 /*
 ========================================================
