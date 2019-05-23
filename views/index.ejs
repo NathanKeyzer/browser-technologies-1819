@@ -1,9 +1,10 @@
 <html>
   <head>
-    <title>Lijstje</title>
+    <title>Browsertodo</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href="/css/main.css" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
   </head>
 <body>
   <main>
@@ -23,43 +24,49 @@
 
       <ul class="todo">
         <% for (let taskKey in task) { %>
-          <li class="editMode">
-            <input id="<%= taskKey %>" class="vinkje" type="checkbox" name="check" value="<%= taskKey %>"/>
-            <label for="<%= taskKey %>"class="streep"><%= task[taskKey].label %></label>
-            <% if (locals.editID && taskKey === editID) { %>
-              <form action="/edit/<%= taskKey %>" method="post">
-                <input type="text" name="new" value="<%= task[taskKey].label %>">
-                <input class="save" type="submit" value="💾">
-              </form>
-            <% } else { %>
-              <a href="/edit/<%= taskKey %>">🖋</a>
+          <% if (task[taskKey].isCompleted === false) { %>
+            <li class="editMode">
+              <input id="<%= taskKey %>" class="vinkje" type="checkbox" name="check" value="<%= taskKey %>"/>
+              <label for="<%= taskKey %>"class="streep"><%= task[taskKey].label %></label>
+              <% if (locals.editID && taskKey === editID) { %>
+                <form action="/edit/<%= taskKey %>" method="post">
+                  <input type="text" name="new" value="<%= task[taskKey].label %>">
+                  <input class="save" type="submit" value="💾">
+                </form>
+              <% } else { %>
+                <a href="/edit/<%= taskKey %>">🖋</a>
+              <% } %>
+              <button class="delete" formaction="/removetask/<%= taskKey %>">&#128465;</button>
+              <button class="check" formaction="/check">✔️</button>
+            </li>
             <% } %>
-            <button class="delete" formaction="/removetask/<%= taskKey %>">&#128465;</button>
-          </li>
+        <% } %>
+
+      </ul>
+
+      <label for="nieuwe-taak">Volbracht</label>
+      <ul class="complete">
+        <% for( let taskKey in task){ %>
+          <% if (task[taskKey].isCompleted === true) { %>
+            <li class="editMode">
+              <input type="checkbox" checked>
+              <label class="volbracht">
+                <%= task[taskKey].label %>
+              </label>
+              <button class="edit">🖋</button>
+              <button class="delete" formaction="/removetask/<%= taskKey %>">&#128465;</button>
+            </li>
           <% } %>
-
-        </ul>
-
-        <label for="nieuwe-taak">Volbracht</label>
-          <ul class="complete">
-          <% for(var i = 0; i < complete.length; i++){ %>
-          <li class="editMode">
-          <input type="checkbox" checked>
-          <label class="volbracht">
-          <%= complete[i] %>
-          </label>
-          <button class="edit">🖋</button>
-          <button class="delete" formaction="/removetask/<%= task[i] %>">&#128465;</button>
-        </li>
-  <% } %>
-  </ul>
+        <% } %>
+      </ul>
   <!-- </fieldset> -->
   <!-- </form> -->
 </main>
 
-
-<script type="text/javascript"src="./js/main.js">
-
+<script type="module" src="js/main.js"></script>
+<script type="text/javascript"src="js/main.js">
 </script>
+
+
 </body>
 </html>
