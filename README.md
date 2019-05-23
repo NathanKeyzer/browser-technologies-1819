@@ -1,13 +1,13 @@
 # Browser Technologies
 
 [live demo](https://browsertodo.herokuapp.com/)
-![image](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/public/images/app.png?raw=true)
+![image](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/public/images/application.png?raw=true)
 
 ## Table of content
 
 - [The Case](thecase)
 - [Wireflow](wireflow)
-- [Beschrijving Features](beschrijvingfeatures)
+- [Browser test](browsertest)
 - [3 lagen volgens PE](3lagenvolgenspe)
 - [Kleuren en Contrast](kleurenencontrast)
 
@@ -21,7 +21,8 @@ Hieronder is een kleine wireflow te zien van de hoofdfunctionaliteit van deze we
 
 ![wireflow](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/public/images/wireflow.JPG?raw=true)
 
-### Beschrijving features
+### Browser test
+![Device lab](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/public/images/device-lab.png?raw=true)
 
 ### 3 lagen volgens PE
 
@@ -33,7 +34,9 @@ CSS toegepast ziet de App er mooi uit hij werkt ook zonder javascript omdat hij 
 
 3. Pleasurable
 Als alles aanstaat werkt de App zoals ik hem bedacht heb. Met daarbij alle finctionaliteiten.
+![No CSS](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/public/images/no-css.png?raw=true)
 
+![All active](https://github.com/NathanKeyzer/browser-technologies-1819/blob/master/public/images/all-active.png?raw=true)
 
 ### Kleuren en Contrast
 
